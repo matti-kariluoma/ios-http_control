@@ -29,14 +29,14 @@
 
 /* Begin PBXFileReference section */
 		493967DA1A01FA6600D3B2BF /* icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = icon.svg; sourceTree = "<group>"; };
-		498255BB1A01CAAD003A7353 /* http_control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = http_control.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		498255BB1A01CAAD003A7353 /* Http Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Http Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		498255BF1A01CAAD003A7353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498255C01A01CAAD003A7353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		498255C21A01CAAD003A7353 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		498255C51A01CAAD003A7353 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		498255C71A01CAAD003A7353 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		498255CA1A01CAAD003A7353 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		498255D01A01CAAD003A7353 /* http_controlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = http_controlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		498255D01A01CAAD003A7353 /* Http ControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Http ControlTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		498255D51A01CAAD003A7353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498255D61A01CAAD003A7353 /* http_controlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = http_controlTests.swift; sourceTree = "<group>"; };
 		498255E41A01E10E003A7353 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		498255BC1A01CAAD003A7353 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				498255BB1A01CAAD003A7353 /* http_control.app */,
-				498255D01A01CAAD003A7353 /* http_controlTests.xctest */,
+				498255BB1A01CAAD003A7353 /* Http Control.app */,
+				498255D01A01CAAD003A7353 /* Http ControlTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,9 +121,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		498255BA1A01CAAD003A7353 /* http_control */ = {
+		498255BA1A01CAAD003A7353 /* Http Control */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 498255DA1A01CAAD003A7353 /* Build configuration list for PBXNativeTarget "http_control" */;
+			buildConfigurationList = 498255DA1A01CAAD003A7353 /* Build configuration list for PBXNativeTarget "Http Control" */;
 			buildPhases = (
 				498255B71A01CAAD003A7353 /* Sources */,
 				498255B81A01CAAD003A7353 /* Frameworks */,
@@ -133,14 +133,14 @@
 			);
 			dependencies = (
 			);
-			name = http_control;
+			name = "Http Control";
 			productName = http_control;
-			productReference = 498255BB1A01CAAD003A7353 /* http_control.app */;
+			productReference = 498255BB1A01CAAD003A7353 /* Http Control.app */;
 			productType = "com.apple.product-type.application";
 		};
-		498255CF1A01CAAD003A7353 /* http_controlTests */ = {
+		498255CF1A01CAAD003A7353 /* Http ControlTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 498255DD1A01CAAD003A7353 /* Build configuration list for PBXNativeTarget "http_controlTests" */;
+			buildConfigurationList = 498255DD1A01CAAD003A7353 /* Build configuration list for PBXNativeTarget "Http ControlTests" */;
 			buildPhases = (
 				498255CC1A01CAAD003A7353 /* Sources */,
 				498255CD1A01CAAD003A7353 /* Frameworks */,
@@ -151,9 +151,9 @@
 			dependencies = (
 				498255D21A01CAAD003A7353 /* PBXTargetDependency */,
 			);
-			name = http_controlTests;
+			name = "Http ControlTests";
 			productName = http_controlTests;
-			productReference = 498255D01A01CAAD003A7353 /* http_controlTests.xctest */;
+			productReference = 498255D01A01CAAD003A7353 /* Http ControlTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -174,7 +174,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 498255B61A01CAAD003A7353 /* Build configuration list for PBXProject "http_control" */;
+			buildConfigurationList = 498255B61A01CAAD003A7353 /* Build configuration list for PBXProject "Http Control" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -187,8 +187,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				498255BA1A01CAAD003A7353 /* http_control */,
-				498255CF1A01CAAD003A7353 /* http_controlTests */,
+				498255BA1A01CAAD003A7353 /* Http Control */,
+				498255CF1A01CAAD003A7353 /* Http ControlTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,7 +238,7 @@
 /* Begin PBXTargetDependency section */
 		498255D21A01CAAD003A7353 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 498255BA1A01CAAD003A7353 /* http_control */;
+			target = 498255BA1A01CAAD003A7353 /* Http Control */;
 			targetProxy = 498255D11A01CAAD003A7353 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -348,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = http_control/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Http Control";
 			};
 			name = Debug;
 		};
@@ -358,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = http_control/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Http Control";
 			};
 			name = Release;
 		};
@@ -376,7 +376,7 @@
 				);
 				INFOPLIST_FILE = http_controlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Http ControlTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/http_control.app/http_control";
 			};
 			name = Debug;
@@ -391,7 +391,7 @@
 				);
 				INFOPLIST_FILE = http_controlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Http ControlTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/http_control.app/http_control";
 			};
 			name = Release;
@@ -399,7 +399,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		498255B61A01CAAD003A7353 /* Build configuration list for PBXProject "http_control" */ = {
+		498255B61A01CAAD003A7353 /* Build configuration list for PBXProject "Http Control" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				498255D81A01CAAD003A7353 /* Debug */,
@@ -408,7 +408,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		498255DA1A01CAAD003A7353 /* Build configuration list for PBXNativeTarget "http_control" */ = {
+		498255DA1A01CAAD003A7353 /* Build configuration list for PBXNativeTarget "Http Control" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				498255DB1A01CAAD003A7353 /* Debug */,
@@ -417,7 +417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		498255DD1A01CAAD003A7353 /* Build configuration list for PBXNativeTarget "http_controlTests" */ = {
+		498255DD1A01CAAD003A7353 /* Build configuration list for PBXNativeTarget "Http ControlTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				498255DE1A01CAAD003A7353 /* Debug */,
