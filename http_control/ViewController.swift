@@ -8,7 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController,UITableViewDelegate, UITableViewDataSource
+{
+    let httpds: [String]
+    required init(coder aDecoder: NSCoder) {
+        self.httpds = [
+                "http://192.168.3.100:8000/",
+                "http://192.168.3.100:8080/",
+                "obnoxiously long title tha twill over flow at some point hopefully righgt at the edge of the screen"
+            ]
+        super.init(coder: aDecoder)
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.httpds.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+    //let cell = TableCell(style: UITableViewCellStyle.Default, reuseIdentifier: "httpd_entry")
+    let cell = self.tableView.dequeueReusableCellWithIdentifier("httpd_entry") as TableCell
+        cell.title?.text = self.httpds[indexPath.row]
+        return cell
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -13,6 +13,7 @@
 		498255C81A01CAAD003A7353 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498255C71A01CAAD003A7353 /* Images.xcassets */; };
 		498255CB1A01CAAD003A7353 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498255C91A01CAAD003A7353 /* LaunchScreen.xib */; };
 		498255D71A01CAAD003A7353 /* http_controlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498255D61A01CAAD003A7353 /* http_controlTests.swift */; };
+		498255E51A01E10E003A7353 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498255E41A01E10E003A7353 /* TableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		498255D01A01CAAD003A7353 /* http_controlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = http_controlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		498255D51A01CAAD003A7353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498255D61A01CAAD003A7353 /* http_controlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = http_controlTests.swift; sourceTree = "<group>"; };
+		498255E41A01E10E003A7353 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				498255C01A01CAAD003A7353 /* AppDelegate.swift */,
 				498255C21A01CAAD003A7353 /* ViewController.swift */,
+				498255E41A01E10E003A7353 /* TableCell.swift */,
 				498255C41A01CAAD003A7353 /* Main.storyboard */,
 				498255C71A01CAAD003A7353 /* Images.xcassets */,
 				498255C91A01CAAD003A7353 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498255E51A01E10E003A7353 /* TableCell.swift in Sources */,
 				498255C31A01CAAD003A7353 /* ViewController.swift in Sources */,
 				498255C11A01CAAD003A7353 /* AppDelegate.swift in Sources */,
 			);
@@ -407,6 +411,7 @@
 				498255DC1A01CAAD003A7353 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		498255DD1A01CAAD003A7353 /* Build configuration list for PBXNativeTarget "http_controlTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				498255DF1A01CAAD003A7353 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
