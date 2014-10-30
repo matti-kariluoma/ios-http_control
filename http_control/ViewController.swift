@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UITableViewController,UITableViewDelegate, UITableViewDataSource
 {
+    @IBAction
+    func refresh()
+    {
+        self.tableView.reloadData()
+    }
+    
     let httpds: [String]
     required init(coder aDecoder: NSCoder) {
         self.httpds = [
@@ -25,8 +31,6 @@ class ViewController: UITableViewController,UITableViewDelegate, UITableViewData
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-    //let cell = TableCell(style: UITableViewCellStyle.Default, reuseIdentifier: "httpd_entry")
     let cell = self.tableView.dequeueReusableCellWithIdentifier("httpd_entry") as TableCell
         cell.title?.text = self.httpds[indexPath.row]
         return cell

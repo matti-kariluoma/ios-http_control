@@ -17,7 +17,11 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Local Http Servers" prompt=" " id="ptW-Lt-S16">
-                                    <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="xl4-p1-vcr"/>
+                                    <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="xl4-p1-vcr">
+                                        <connections>
+                                            <action selector="refresh" destination="sPM-87-iNV" id="tkj-up-rkD"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <attributedString key="userComments">
                                         <fragment>
                                             <string key="content" base64-UTF8="YES">
@@ -33,13 +37,13 @@ CA
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="httpd_entry" id="701-7B-YDf" customClass="TableCell" customModule="http_control" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="httpd_entry" id="701-7B-YDf" customClass="TableCell" customModule="http_control" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="701-7B-YDf" id="3CS-3z-E5G">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bu-9z-j5e">
-                                            <rect key="frame" x="8" y="15" width="584" height="21"/>
+                                            <rect key="frame" x="8" y="11" width="64" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -60,7 +64,7 @@ CA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7e-1F-XTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-189" y="-46"/>
+            <point key="canvasLocation" x="-189" y="-50"/>
         </scene>
     </scenes>
 </document>
