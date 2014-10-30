@@ -20,7 +20,8 @@ class ViewController: UITableViewController,UITableViewDelegate, UITableViewData
         self.tableView.reloadData()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder)
+    {
         self.httpds = [
                 "http://192.168.3.100:8000/",
                 "http://192.168.3.100:8080/",
@@ -29,16 +30,27 @@ class ViewController: UITableViewController,UITableViewDelegate, UITableViewData
         super.init(coder: aDecoder)
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return self.httpds.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
     let cell = self.tableView.dequeueReusableCellWithIdentifier("httpd_entry") as TableCell
         cell.title?.text = self.httpds[indexPath.row]
         return cell
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        if let url = NSURL(string: self.httpds[indexPath.row])
+        {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

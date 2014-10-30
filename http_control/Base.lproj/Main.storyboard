@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="U1c-Qf-1Db">
             <objects>
-                <tableViewController id="sPM-87-iNV" customClass="ViewController" customModule="http_control" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="sPM-87-iNV" customClass="ViewController" customModule="Http_Control" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="O15-cH-Exb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@ CA
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="httpd_entry" id="701-7B-YDf" customClass="TableCell" customModule="http_control" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="httpd_entry" id="701-7B-YDf" customClass="TableCell" customModule="Http_Control" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="701-7B-YDf" id="3CS-3z-E5G">
                                     <autoresizingMask key="autoresizingMask"/>
