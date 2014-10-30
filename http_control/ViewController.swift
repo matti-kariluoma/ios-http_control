@@ -10,13 +10,16 @@ import UIKit
 
 class ViewController: UITableViewController,UITableViewDelegate, UITableViewDataSource
 {
+    var httpds: [String]
+    
     @IBAction
     func refresh()
     {
+        self.httpds.removeAtIndex(0)
+        self.httpds.append("hello")
         self.tableView.reloadData()
     }
     
-    let httpds: [String]
     required init(coder aDecoder: NSCoder) {
         self.httpds = [
                 "http://192.168.3.100:8000/",
