@@ -15,6 +15,8 @@
 		498255CB1A01CAAD003A7353 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498255C91A01CAAD003A7353 /* LaunchScreen.xib */; };
 		498255D71A01CAAD003A7353 /* http_controlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498255D61A01CAAD003A7353 /* http_controlTests.swift */; };
 		498255E51A01E10E003A7353 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498255E41A01E10E003A7353 /* TableCell.swift */; };
+		49F504D11A032CA200080BDE /* BonjourBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F504D01A032CA200080BDE /* BonjourBrowser.swift */; };
+		49F504D31A032CBF00080BDE /* BonjourServicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F504D21A032CBF00080BDE /* BonjourServicer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		498255D51A01CAAD003A7353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498255D61A01CAAD003A7353 /* http_controlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = http_controlTests.swift; sourceTree = "<group>"; };
 		498255E41A01E10E003A7353 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		49F504D01A032CA200080BDE /* BonjourBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BonjourBrowser.swift; path = ../BonjourBrowser.swift; sourceTree = "<group>"; };
+		49F504D21A032CBF00080BDE /* BonjourServicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BonjourServicer.swift; path = ../BonjourServicer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +85,15 @@
 		498255BD1A01CAAD003A7353 /* http_control */ = {
 			isa = PBXGroup;
 			children = (
-				498255C01A01CAAD003A7353 /* AppDelegate.swift */,
-				493967DA1A01FA6600D3B2BF /* icon.svg */,
+				49F504D01A032CA200080BDE /* BonjourBrowser.swift */,
+				49F504D21A032CBF00080BDE /* BonjourServicer.swift */,
 				498255C21A01CAAD003A7353 /* ViewController.swift */,
 				498255E41A01E10E003A7353 /* TableCell.swift */,
 				498255C41A01CAAD003A7353 /* Main.storyboard */,
 				498255C71A01CAAD003A7353 /* Images.xcassets */,
 				498255C91A01CAAD003A7353 /* LaunchScreen.xib */,
+				498255C01A01CAAD003A7353 /* AppDelegate.swift */,
+				493967DA1A01FA6600D3B2BF /* icon.svg */,
 				498255BE1A01CAAD003A7353 /* Supporting Files */,
 			);
 			path = http_control;
@@ -220,7 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				498255E51A01E10E003A7353 /* TableCell.swift in Sources */,
+				49F504D31A032CBF00080BDE /* BonjourServicer.swift in Sources */,
 				498255C31A01CAAD003A7353 /* ViewController.swift in Sources */,
+				49F504D11A032CA200080BDE /* BonjourBrowser.swift in Sources */,
 				498255C11A01CAAD003A7353 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
