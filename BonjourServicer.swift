@@ -29,8 +29,7 @@ class BonjourServicer: NSObject, NSNetServiceDelegate
     
     func netService(sender: NSNetService, didNotResolve errorDict: [NSObject : AnyObject])
     {
-        view.httpds.append("service resolve error")
+        view.httpds.append("service resolve error: \(errorDict[NSNetServicesErrorCode]!)")
         view.tableView.reloadData()
-        NSLog("Search was not successful. Error code: \(errorDict[NSNetServicesErrorCode]!)")
     }
 }
