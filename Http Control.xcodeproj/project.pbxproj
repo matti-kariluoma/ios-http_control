@@ -17,6 +17,7 @@
 		498255E51A01E10E003A7353 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498255E41A01E10E003A7353 /* TableCell.swift */; };
 		499852D71A034A5200F72A5B /* BonjourBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499852D61A034A5200F72A5B /* BonjourBrowser.swift */; };
 		499852D91A034AB100F72A5B /* BareBonjourServicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499852D81A034AB100F72A5B /* BareBonjourServicer.swift */; };
+		499852DB1A034D1D00F72A5B /* bareBonjourServicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499852DA1A034D1D00F72A5B /* bareBonjourServicer.swift */; };
 		49F504D11A032CA200080BDE /* BareBonjourBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F504D01A032CA200080BDE /* BareBonjourBrowser.swift */; };
 		49F504D31A032CBF00080BDE /* BonjourServicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F504D21A032CBF00080BDE /* BonjourServicer.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		498255E41A01E10E003A7353 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		499852D61A034A5200F72A5B /* BonjourBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonjourBrowser.swift; sourceTree = SOURCE_ROOT; };
 		499852D81A034AB100F72A5B /* BareBonjourServicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BareBonjourServicer.swift; sourceTree = SOURCE_ROOT; };
+		499852DA1A034D1D00F72A5B /* bareBonjourServicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bareBonjourServicer.swift; sourceTree = "<group>"; };
 		49F504D01A032CA200080BDE /* BareBonjourBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BareBonjourBrowser.swift; path = ../BareBonjourBrowser.swift; sourceTree = "<group>"; };
 		49F504D21A032CBF00080BDE /* BonjourServicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BonjourServicer.swift; path = ../BonjourServicer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				499852D61A034A5200F72A5B /* BonjourBrowser.swift */,
 				49F504D21A032CBF00080BDE /* BonjourServicer.swift */,
 				498255C21A01CAAD003A7353 /* ViewController.swift */,
+				499852DA1A034D1D00F72A5B /* bareBonjourServicer.swift */,
 				498255E41A01E10E003A7353 /* TableCell.swift */,
 				498255C41A01CAAD003A7353 /* Main.storyboard */,
 				498255C71A01CAAD003A7353 /* Images.xcassets */,
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				499852DB1A034D1D00F72A5B /* bareBonjourServicer.swift in Sources */,
 				499852D91A034AB100F72A5B /* BareBonjourServicer.swift in Sources */,
 				498255E51A01E10E003A7353 /* TableCell.swift in Sources */,
 				49F504D31A032CBF00080BDE /* BonjourServicer.swift in Sources */,
