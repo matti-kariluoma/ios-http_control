@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UITableViewController,UITableViewDelegate, UITableViewDataSource
 {
     var httpds: [String]
-    let browser: BonjourBrowser?
+    let browser: BareBonjourBrowser
     
     @IBAction
     func refresh()
@@ -28,8 +28,8 @@ class ViewController: UITableViewController,UITableViewDelegate, UITableViewData
                 "http://192.168.3.100:8080/",
                 "obnoxiously long title tha twill over flow at some point hopefully righgt at the edge of the screen"
             ]
+        self.browser = BareBonjourBrowser()
         super.init(coder: aDecoder)
-        self.browser = BonjourBrowser(view: self)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int

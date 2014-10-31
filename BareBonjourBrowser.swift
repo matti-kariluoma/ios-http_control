@@ -1,5 +1,5 @@
 //
-//  BonjourBrowser.swift
+//  BareBonjourBrowser.swift
 //  Http Control
 //
 //  Created by Matti Kariluoma on 10/30/14.
@@ -9,18 +9,16 @@
 import Foundation
 
 
-class BonjourBrowser: NSObject, NSNetServiceBrowserDelegate
+class BareBonjourBrowser: NSObject, NSNetServiceBrowserDelegate
 {
-    let view: ViewController
     let browser: NSNetServiceBrowser
-    let servicer: BonjourServicer
+    let servicer: BareBonjourServicer
     var found: [NSNetService]
     
-    init(view: ViewController)
+    override init()
     {
-        self.view = view
         self.browser = NSNetServiceBrowser()
-        self.servicer = BonjourServicer(view: view)
+        self.servicer = BareBonjourServicer()
         self.found = []
         super.init()
         self.browser.delegate = self
@@ -40,16 +38,14 @@ class BonjourBrowser: NSObject, NSNetServiceBrowserDelegate
             service.delegate = servicer
             service.resolveWithTimeout(5)
             let name = service.name
-            view.httpds.append("search \(name)")
+            NSLog("search \(name)")
         }
-        view.tableView.reloadData()
         found.removeAll()
     }
     
     func netServiceBrowser(aNetServiceBrowser: NSNetServiceBrowser, didNotSearch errorDict: [NSObject : AnyObject])
     {
-        view.httpds.append("search failed")
-        view.tableView.reloadData()
+        NSLog("search failed")
     }
     
        

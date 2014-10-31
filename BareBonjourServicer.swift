@@ -1,5 +1,5 @@
 //
-//  BonjourService.swift
+//  BareBonjourService.swift
 //  Http Control
 //
 //  Created by Matti Kariluoma on 10/30/14.
@@ -8,43 +8,35 @@
 
 import Foundation
 
-class BonjourServicer: NSObject, NSNetServiceDelegate
+class BareBonjourServicer: NSObject, NSNetServiceDelegate
 {
-    let view: ViewController
-    
-    init(view: ViewController)
+    override init()
     {
-        self.view = view
         super.init()
     }
     
     func netServiceDidResolveAddress(sender: NSNetService)
     {
-        view.httpds.append("found something")
-        view.tableView.reloadData()
+        NSLog("found something")
         let host = sender.hostName
         let port = sender.port
-        view.httpds.append("http://\(host):\(port)/")
-        view.tableView.reloadData()
+        NSLog("http://\(host):\(port)/")
     }
     
     func netService(sender: NSNetService, didNotResolve errorDict: [NSObject : AnyObject])
     {
-        view.httpds.append("service resolve error: \(errorDict[NSNetServicesErrorCode]!)")
-        view.tableView.reloadData()
+        NSLog("service resolve error: \(errorDict[NSNetServicesErrorCode]!)")
     }
     
     func netServiceWillResolve(sender: NSNetService)
     {
         let name = sender.name
-        view.httpds.append("looking for \(name)")
-        view.tableView.reloadData()
+        NSLog("looking for \(name)")
     }
     
     func netServiceDidStop(sender: NSNetService)
     {
         let name = sender.name
-        view.httpds.append("done with \(name)")
-        view.tableView.reloadData()
+        NSLog("done with \(name)")
     }
 }
