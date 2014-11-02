@@ -11,23 +11,21 @@ import UIKit
 class ViewController: UITableViewController,UITableViewDelegate, UITableViewDataSource
 {
     var httpds: [String]
+    let none_found = "No Http servers can be found!"
     let browser: BonjourBrowser?
     
     @IBAction
     func refresh()
     {
-        self.httpds.removeAtIndex(0)
-        self.httpds.append("hello")
-        self.tableView.reloadData()
+        if self.httpds.count < 1
+        {
+            self.httpds.append(none_found)
+        }
     }
     
     required init(coder aDecoder: NSCoder)
     {
-        self.httpds = [
-                "http://192.168.3.100:8000/",
-                "http://192.168.3.100:8080/",
-                "obnoxiously long title tha twill over flow at some point hopefully righgt at the edge of the screen"
-            ]
+        self.httpds = [none_found]
         super.init(coder: aDecoder)
         self.browser = BonjourBrowser(view: self)
     }

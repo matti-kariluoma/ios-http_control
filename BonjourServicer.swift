@@ -10,18 +10,16 @@ import Foundation
 
 class BonjourServicer: NSObject, NSNetServiceDelegate
 {
-    let view: ViewController
+    let supervisor: BonjourBrowser
     
-    init(view: ViewController)
+    init(supervisor: BonjourBrowser)
     {
-        self.view = view
+        self.supervisor = supervisor
         super.init()
     }
     
     func netServiceDidResolveAddress(sender: NSNetService)
     {
-        view.httpds.append("found something")
-        view.tableView.reloadData()
         if let addresses = sender.addresses
         {
             var ips: [String] = []
@@ -50,31 +48,18 @@ class BonjourServicer: NSObject, NSNetServiceDelegate
                 }
             }
             let port = sender.port
+            var httpds: [String] = []
             for host in ips
             {
-                view.httpds.append("http://\(host):\(port)/")
+                let httpd = "http://\(host):\(port)/"
+                httpds.append(httpd)
             }
-            view.tableView.reloadData()
+            supervisor.resolvedService(sender, httpds)
         }
     }
     
     func netService(sender: NSNetService, didNotResolve errorDict: [NSObject : AnyObject])
     {
-        view.httpds.append("service resolve error: \(errorDict[NSNetServicesErrorCode]!)")
-        view.tableView.reloadData()
-    }
-    
-    func netServiceWillResolve(sender: NSNetService)
-    {
-        let name = sender.name
-        view.httpds.append("looking for \(name)")
-        view.tableView.reloadData()
-    }
-    
-    func netServiceDidStop(sender: NSNetService)
-    {
-        let name = sender.name
-        view.httpds.append("done with \(name)")
-        view.tableView.reloadData()
+        supervisor.forgetService(sender)
     }
 }
