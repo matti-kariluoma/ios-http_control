@@ -15,6 +15,7 @@ class BonjourBrowser: NSObject, NSNetServiceBrowserDelegate
     let browser: NSNetServiceBrowser
     let servicer: BonjourServicer
     var found: [NSNetService]
+    var resolving: [NSNetService]
     
     init(view: ViewController)
     {
@@ -22,10 +23,11 @@ class BonjourBrowser: NSObject, NSNetServiceBrowserDelegate
         self.browser = NSNetServiceBrowser()
         self.servicer = BonjourServicer(view: view)
         self.found = []
+        self.resolving = []
         super.init()
         self.browser.delegate = self
         self.browser.searchForServicesOfType(
-            "_ssh._tcp.", inDomain:"")
+            "_http._tcp.", inDomain:"")
     }
     
     func addService(service: NSNetService)
@@ -35,15 +37,16 @@ class BonjourBrowser: NSObject, NSNetServiceBrowserDelegate
     
     func resolve()
     {
-        for service in self.found
+        resolving.extend(found)
+        found.removeAll()
+        for service in self.resolving
         {
             service.delegate = servicer
-            service.resolveWithTimeout(5)
+            service.resolveWithTimeout(20)
             let name = service.name
             view.httpds.append("search \(name)")
         }
         view.tableView.reloadData()
-        found.removeAll()
     }
     
     func netServiceBrowser(aNetServiceBrowser: NSNetServiceBrowser, didNotSearch errorDict: [NSObject : AnyObject])
