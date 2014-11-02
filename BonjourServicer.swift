@@ -22,10 +22,28 @@ class BonjourServicer: NSObject, NSNetServiceDelegate
     {
         view.httpds.append("found something")
         view.tableView.reloadData()
-        let host = sender.hostName
-        let port = sender.port
-        view.httpds.append("http://\(host):\(port)/")
-        view.tableView.reloadData()
+        if let addresses = sender.addresses
+        {
+            var ips: [String] = []
+            for address in addresses
+            {
+                let ptr = UnsafePointer<sockaddr_in>(address.bytes)
+                var addr = ptr.memory.sin_addr
+                let family = ptr.memory.sin_family
+                var buf = UnsafeMutablePointer<Int8>.alloc(Int(INET6_ADDRSTRLEN))
+                let ipc = inet_ntop(Int32(family), &addr, buf, __uint32_t(INET6_ADDRSTRLEN))
+                if let ip = String.fromCString(ipc)
+                {
+                    ips.append(ip)
+                }
+            }
+            let port = sender.port
+            for host in ips
+            {
+                view.httpds.append("http://\(host):\(port)/")
+            }
+            view.tableView.reloadData()
+        }
     }
     
     func netService(sender: NSNetService, didNotResolve errorDict: [NSObject : AnyObject])
