@@ -25,7 +25,7 @@ class BonjourBrowser: NSObject, NSNetServiceBrowserDelegate
         super.init()
         self.browser.delegate = self
         self.browser.searchForServicesOfType(
-            "_http._tcp.", inDomain:"")
+            "_ssh._tcp.", inDomain:"")
     }
     
     func addService(service: NSNetService)
